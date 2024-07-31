@@ -25,7 +25,8 @@ Just import the utility type you need and use it like this
 ```ts
 import { Unpacked } from "ts-typex";
 
-type InferMyType = Unpacked<string[]>; // string | number | boolean
+type A = Unpacked<string[]>; // string
+type B = Unpacked<number[][][]>; // number
 ```
 
 ## Available utility types
