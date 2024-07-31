@@ -3,19 +3,19 @@
 
 ## Overview
 
-`ts-typex` package to help you to work with typescript type easier.
+`ts-uni` package to help you to work with typescript type easier.
 
 ## Installation
 
 ```bash
 # npm
-npm install ts-typex
+npm install ts-uni
 
 # yarn
-yarn add ts-typex
+yarn add ts-uni
 
 # pnpm
-pnpm install ts-typex
+pnpm install ts-uni
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ pnpm install ts-typex
 Just import the utility type you need and use it like this
 
 ```ts
-import { Unpacked } from "ts-typex";
+import { Unpacked } from "ts-uni";
 
 type A = Unpacked<string[]>; // string
 type B = Unpacked<number[][][]>; // number
