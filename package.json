@@ -10,7 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development tsup src/index.ts --watch",
-    "build": "cross-env NODE_ENV=production tsup src/index.ts"
+    "build": "cross-env NODE_ENV=production tsup src/index.ts",
+    "publish": "npm run build && npm publish --access public"
   },
   "author": {
     "name": "Trong Duong",
