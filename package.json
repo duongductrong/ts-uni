@@ -31,7 +31,7 @@
   },
   "release-it": {
     "git": {
-      "commitMessage": "chore(release): v${version}"
+      "commitMessage": "chore(release): :bookmark: v${version}"
     },
     "github": {
       "release": true
