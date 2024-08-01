@@ -9,8 +9,8 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env NODE_ENV=development tsup src/index.ts --watch",
-    "build": "cross-env NODE_ENV=production tsup src/index.ts",
+    "dev": "cross-env NODE_ENV=development tsup --watch",
+    "build": "cross-env NODE_ENV=production tsup",
     "pub": "npm run build && npm publish --access public",
     "release": "release-it"
   },
@@ -27,6 +27,11 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react.mjs",
+      "require": "./dist/react.js",
+      "types": "./dist/react.d.ts"
     }
   },
   "release-it": {
@@ -48,6 +53,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "@types/react": "^18.3.3",
     "cross-env": "^7.0.3",
     "release-it": "^17.6.0",
     "tsup": "^8.2.3",

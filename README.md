@@ -1,5 +1,28 @@
+<p align="center">
+  <!-- <img src="logo.svg" width="200px" align="center" alt="Zod logo" /> -->
+  <h1 align="center">ts-uni</h1>
+  <p align="center">
+    ✨ <a href="https://github.com/duongductrong/ts-uni">ts-uni.dev</a> ✨
+    <br/>
+    Universal TypeScript Utilities
+  </p>
+</p>
+
+<!-- [![Build Status](https://img.shields.io/github/actions/workflow/status/duongductrong/ts-uni/lint-and-type.yml?branch=main&style=flat&colorA=000000&colorB=000000)](https://github.com/duongductrong/ts-uni/actions?query=workflow%3ALint) -->
+
+<!-- [![Build Size](https://img.shields.io/bundlephobia/minzip/ts-uni?label=bundle%20size&style=flat&colorA=000000&colorB=000000)](https://bundlephobia.com/result?p=ts-uni) -->
+
+<p align="center">
+<a href="https://twitter.com/duongductrong_" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@duongductrong-4BBAAB.svg" alt="Created by Dan"></a>
+<!-- <a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/colinhacks/ts-uni" alt="License"></a> -->
+<a href="https://www.npmjs.com/package/ts-uni" rel="nofollow"><img src="https://img.shields.io/npm/dw/ts-uni.svg" alt="npm"></a>
+<a href="https://www.npmjs.com/package/ts-uni" rel="nofollow"><img src="https://img.shields.io/github/stars/duongductrong/ts-uni" alt="stars"></a>
+</p>
+
 > [!WARNING]  
 > This package is still in development, so it may not be stable yet.
+> Please use it with caution.
+> And the documentation may not be complete yet.
 
 ## Overview
 
@@ -18,17 +41,26 @@ yarn add ts-uni
 pnpm install ts-uni
 ```
 
-## Usage
+## Basic Usage
 
-Just import the utility type you need and use it like this
+Import and use a simple utility type
 
 ```ts
-import { Unpacked } from "ts-uni";
+import { ChainKey } from "ts-uni";
 
-type A = Unpacked<string[]>; // string
-type B = Unpacked<number[][][]>; // number
+const obj = {
+  a: {
+    b: {
+      c: 1,
+    },
+  },
+};
+
+type Result = ChainKey<typeof obj>; // "a" | "a.b" | "a.b.c"
 ```
 
-## Available utility types
+## Contributing
 
-In progress...
+If you have any useful types, please submit a pull request to the `src/` folder.
+
+We will review and merge it as soon as possible.
