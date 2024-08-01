@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development tsup src/index.ts --watch",
     "build": "cross-env NODE_ENV=production tsup src/index.ts",
-    "pub": "npm run build && npm publish --access public"
+    "pub": "npm run build && npm publish --access public",
+    "release": "release-it"
   },
   "author": {
     "name": "Trong Duong",
@@ -28,6 +29,17 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore(release): v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/duongductrong/ts-uni"
@@ -37,6 +49,7 @@
   "devDependencies": {
     "@types/node": "^22.0.0",
     "cross-env": "^7.0.3",
+    "release-it": "^17.6.0",
     "tsup": "^8.2.3",
     "typescript": "^5.5.4"
   },
