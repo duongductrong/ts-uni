@@ -46,7 +46,7 @@ pnpm install ts-uni
 Import and use a simple utility type
 
 ```ts
-import { ChainKey } from "ts-uni";
+import { Chain } from "ts-uni";
 
 const obj = {
   a: {
@@ -56,7 +56,7 @@ const obj = {
   },
 };
 
-type Result = ChainKey<typeof obj>; // "a" | "a.b" | "a.b.c"
+type Result = Chain<typeof obj>; // "a" | "a.b" | "a.b.c"
 ```
 
 ## Contributing
