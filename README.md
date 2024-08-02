@@ -59,6 +59,18 @@ const obj = {
 type Result = Chain<typeof obj>; // "a" | "a.b" | "a.b.c"
 ```
 
+## React Usage
+
+Utility types for React import from `ts-uni/react`
+
+```tsx
+import { ReactEventHandler } from "ts-uni/react";
+
+const handleSomething: ReactEventHandler<"button", "onClick"> = (event) => {
+  console.log("clicked", event);
+};
+```
+
 ## Contributing
 
 If you have any useful types, please submit a pull request to the `src/` folder.
