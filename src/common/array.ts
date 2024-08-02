@@ -78,3 +78,25 @@ export type Reverse<T extends any[], R extends any[] = []> = {
  * ```
  */
 export type Concat<T extends any[], U extends any[]> = [...T, ...U];
+
+/**
+ * Extracts the index of each element in a tuple type.
+ *
+ * @template T - The tuple type from which to extract the indexes.
+ * @template Indexes - The array of indexes.
+ * @returns A string literal union representing the indexes of the elements in the tuple type.
+ * @example
+ * ```ts
+ * type Result = ExtractIndex<[5, 3, 3, 10, 500]>; // "0" | "1" | "2" | "3" | "4"
+ * ```
+ */
+export type ExtractIndex<
+  T,
+  Indexes extends number[] = []
+> = T extends readonly [infer First, ...infer Rest]
+  ? Rest extends any[]
+    ? `${Indexes["length"]}`
+    :
+        | `${Indexes["length"]}`
+        | ExtractIndex<Rest, [...Indexes, Indexes["length"]]>
+  : never;
