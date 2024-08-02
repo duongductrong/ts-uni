@@ -31,9 +31,9 @@
       "types": "./dist/index.d.ts"
     },
     "./react": {
-      "import": "./dist/react.js",
-      "require": "./dist/react.cjs",
-      "types": "./dist/react.d.ts"
+      "import": "./dist/react/index.js",
+      "require": "./dist/react/index.cjs",
+      "types": "./dist/react/index.d.ts"
     }
   },
   "release-it": {
