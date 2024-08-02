@@ -1,5 +1,9 @@
 import { ComponentPropsWithoutRef, ElementType } from "react";
 
+type EventHandlerKeys<T> = {
+  [K in keyof T]: K extends `on${string}` ? K : never;
+}[keyof T];
+
 /**
  * Generic React event handler type.
  * @example
@@ -10,7 +14,6 @@ import { ComponentPropsWithoutRef, ElementType } from "react";
  */
 export type ReactEventHandler<
   E extends ElementType,
-  K extends keyof ComponentPropsWithoutRef<E>
+  // @ts-ignore
+  K extends EventHandlerKeys<ComponentPropsWithoutRef<E>> = "onUnknown"
 > = ComponentPropsWithoutRef<E>[K];
-
-
