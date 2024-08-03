@@ -94,9 +94,11 @@ export type ExtractIndex<
   T,
   Indexes extends number[] = []
 > = T extends readonly [infer First, ...infer Rest]
-  ? Rest extends any[]
+  ? Rest extends never[]
     ? `${Indexes["length"]}`
     :
         | `${Indexes["length"]}`
         | ExtractIndex<Rest, [...Indexes, Indexes["length"]]>
+  : T extends never[]
+  ? "0"
   : never;

@@ -13,11 +13,12 @@
  *    { y: string; k: { l: number } },
  *    { z2: string; k2: { l: number; m: [{ nested: number }] } }
  *   ];
- *  y: {
- *   a: {
- *    dddd: string;
+ *   y: {
+ *    a: {
+ *     dddd: string;
+ *    };
  *   };
- *  };
+ *  }
  * };
  *
  * type Result = Chain<Example>; // "a" | "a.b" | "a.x.0.y" | "a.x.0.k.l" | "a.x.1.z2" | "a.x.1.k2.l" | "a.x.1.k2.m.0.nested" | "a.y.a.dddd"

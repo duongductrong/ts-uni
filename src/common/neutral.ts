@@ -21,8 +21,8 @@ export type Nullable<T> = T | null;
  * A type that can be `null` or `undefined`.
  * @example
  * ```ts
- * const foo: Nullish<string> = null;
- * const bar: Nullish<number> = undefined;
+ * const foo: Maybe<string> = null;
+ * const bar: Maybe<number> = undefined;
  * ```
  */
-export type Nullish<T> = T | null | undefined;
+export type Maybe<T> = T | null | undefined;
