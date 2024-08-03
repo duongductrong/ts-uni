@@ -13,7 +13,7 @@
 <!-- [![Build Size](https://img.shields.io/bundlephobia/minzip/ts-uni?label=bundle%20size&style=flat&colorA=000000&colorB=000000)](https://bundlephobia.com/result?p=ts-uni) -->
 
 <p align="center">
-<a href="https://twitter.com/duongductrong_" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@duongductrong-4BBAAB.svg" alt="Created by Dan"></a>
+<a href="https://github.com/duongductrong" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@duongductrong-4BBAAB.svg" alt="Created by Dan"></a>
 <!-- <a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/colinhacks/ts-uni" alt="License"></a> -->
 <a href="https://www.npmjs.com/package/ts-uni" rel="nofollow"><img src="https://img.shields.io/npm/dw/ts-uni.svg" alt="npm"></a>
 <a href="https://www.npmjs.com/package/ts-uni" rel="nofollow"><img src="https://img.shields.io/github/stars/duongductrong/ts-uni" alt="stars"></a>
